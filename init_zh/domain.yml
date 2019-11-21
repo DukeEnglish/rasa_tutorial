@@ -1,0 +1,38 @@
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+
+actions:
+- utter_greet
+- utter_cheer_up
+- utter_did_that_help
+- utter_happy
+- utter_goodbye
+- utter_iamabot
+
+
+templates:
+  utter_greet:
+  - text: "hi 你好么"
+
+  utter_cheer_up:
+  - text: "希望这个可以给你好心情:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "我能帮助你么"
+
+  utter_happy:
+  - text: "太不给你了 加油"
+
+  utter_goodbye:
+  - text: "再见"
+
+  utter_iamabot:
+  - text: "I am a 机器人, powered by Rasa."
+
