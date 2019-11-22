@@ -1,8 +1,16 @@
 # Configuration for Rasa NLU.
 # https://rasa.com/docs/rasa/nlu/components/
 language: zh
-pipeline: supervised_embeddings
+# pipeline: supervised_embeddings
 
+pipeline:
+- name: "nlp_mitie"
+  model: "../total_word_feature_extractor_zh.dat"
+- name: "tokenizer_jieba"
+- name: "ner_mitie"
+- name: "ner_synonyms"
+- name: "intent_featurizer_mitie"
+- name: "intent_classifier_sklearn"
 # Configuration for Rasa Core.
 # https://rasa.com/docs/rasa/core/policies/
 policies:
